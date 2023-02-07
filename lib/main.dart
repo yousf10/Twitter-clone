@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/main_screen.dart';
+
 
 import 'Dilshad/search_screen.dart';
 
