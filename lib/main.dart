@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/Mywidget.dart';
+import 'package:flutter_twitter_clone/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,4 +29,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
