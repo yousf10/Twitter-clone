@@ -44,7 +44,7 @@ class _MyWidgetState extends State<MyWidget> {
 
         BottomNavigationBarItem( label: " ", icon: ImageIcon( AssetImage("assets/Icon/navicon/mic1.png",),size: 50,color: Colors.black),
         activeIcon: Image.asset("assets/Icon/navicon/mic2.png",
-        height: 58,width: 58,)
+        height: 59,width: 59,)
         ,backgroundColor:Colors.blue),
 
         BottomNavigationBarItem( label: " ", icon: ImageIcon( AssetImage("assets/Icon/navicon/notfication1.png",),size: 52,color: Colors.black),
