@@ -1,22 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_twitter_clone/Dilshad/search_screen.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+import 'package:flutter_twitter_clone/home/homeScreen.dart';
+
+import 'home/HomeAppBar.dart';
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _MainScreenState extends State<MainScreen> {
+  List pages=[
+    HomeScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen()
+  ];
+  List appbars=[
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar()
+  ];
   @override
   int currentindex=0;
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(),
-      
+      appBar: PreferredSize(child: appbars[currentindex], preferredSize:const Size.fromHeight(56)),
+      body: pages[currentindex],
         bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.deepPurpleAccent,

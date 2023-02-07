@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_twitter_clone/mainScreen.dart';
 
 
-import 'Dilshad/search_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TwitterSearchScreen(),
+      home: MainScreen(),
     );
   }
 }
