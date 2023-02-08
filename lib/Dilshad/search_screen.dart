@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class TwitterSearchScreen extends StatelessWidget {
+class TwitterSearchScreen extends StatefulWidget {
+  const TwitterSearchScreen({super.key});
+
+  @override
+  State<TwitterSearchScreen> createState() => _TwitterSearchScreenState();
+}
+
+class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +39,6 @@ class TwitterSearchScreen extends StatelessWidget {
         onPressed: () {},
         child: Icon(Icons.add),
       ),
-    );
+    );;
   }
 }
