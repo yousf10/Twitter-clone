@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_twitter_clone/Dilshad/reuseable_Tweet.dart';
 
 class TwitterSearchScreen extends StatefulWidget {
   const TwitterSearchScreen({super.key});
@@ -14,6 +15,8 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: EdgeInsets.all(10.0),
@@ -31,14 +34,50 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
                 "Trends for you",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               )),
-          Positioned(left: 40, child: Text("#الزلازل")),
-          Positioned(left: 40, child: Text("#David De Gea"))
+          SizedBox(
+            height: 10,
+          ),
+          Positioned(
+              child: Text(
+            "Only on Twitter . Trending",
+            style: TextStyle(fontSize: 15, color: Colors.black54),
+          )),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "Al-Zalazel",
+                NumberOfTweets: "101K",
+                TrendingIn: "Trending in World"),
+          ),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "Dilsha Haji .M ",
+                NumberOfTweets: "5.6M",
+                TrendingIn: "Trending in Iraq"),
+          ),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "Flutter.Dev",
+                NumberOfTweets: "201K",
+                TrendingIn: "Trending in Eouropa"),
+          ),
+          Positioned(
+              child: Text(
+            "Show more",
+            style: TextStyle(color: Colors.blueAccent, fontSize: 17),
+          )),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.add),
       ),
-    );;
+    );
+    ;
   }
 }
