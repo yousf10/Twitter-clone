@@ -1,22 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_twitter_clone/Dilshad/search_screen.dart';
+import 'package:flutter_twitter_clone/Yousf/Drawer/Drawer.dart';
+import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
+
+
+
+
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _MainScreenState extends State<MainScreen> {
+  List pages=[
+    HomeScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen(),
+    TwitterSearchScreen()
+  ];
+  List appbars=[
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar(),
+    HomeAppBar()
+  ];
+  List drawers=[
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu()
+  ];
   @override
   int currentindex=0;
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(),
-      
+      appBar: PreferredSize(child: appbars[currentindex], preferredSize:const Size.fromHeight(56)),
+      drawer: drawers[currentindex],
+      body: pages[currentindex],
         bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.deepPurpleAccent,
@@ -44,7 +75,7 @@ class _MyWidgetState extends State<MyWidget> {
 
         BottomNavigationBarItem( label: " ", icon: ImageIcon( AssetImage("assets/Icon/navicon/mic1.png",),size: 50,color: Colors.black),
         activeIcon: Image.asset("assets/Icon/navicon/mic2.png",
-        height: 58,width: 58,)
+        height: 59,width: 59,)
         ,backgroundColor:Colors.blue),
 
         BottomNavigationBarItem( label: " ", icon: ImageIcon( AssetImage("assets/Icon/navicon/notfication1.png",),size: 52,color: Colors.black),
