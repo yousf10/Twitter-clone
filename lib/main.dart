@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/mainScreen.dart';
+import 'package:flutter_twitter_clone/Yousf/mainScreen.dart';
 
 
 

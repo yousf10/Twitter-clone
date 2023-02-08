@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_twitter_clone/Dilshad/search_screen.dart';
+import 'package:flutter_twitter_clone/Yousf/Drawer/Drawer.dart';
+import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 
-import 'package:flutter_twitter_clone/home/homeScreen.dart';
+import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
 
-import 'home/HomeAppBar.dart';
+
+
+
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -29,12 +33,20 @@ class _MainScreenState extends State<MainScreen> {
     HomeAppBar(),
     HomeAppBar()
   ];
+  List drawers=[
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu(),
+    DrawerMenu()
+  ];
   @override
   int currentindex=0;
   Widget build(BuildContext context) {
     
     return Scaffold(
       appBar: PreferredSize(child: appbars[currentindex], preferredSize:const Size.fromHeight(56)),
+      drawer: drawers[currentindex],
       body: pages[currentindex],
         bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

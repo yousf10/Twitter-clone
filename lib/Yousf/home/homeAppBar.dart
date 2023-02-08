@@ -14,9 +14,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Builder(builder: (context) => IconButton(onPressed: (){
-          
-        }, icon: const  Icon(Icons.account_circle_outlined,size: 28,color: Color.fromARGB(255, 27, 27, 27),),),),
+        leading: IconButton( onPressed: (){Scaffold.of(context).openDrawer();},
+         icon:  Container(height: 30,width: 30,
+           child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 214),
+                        radius: 40,backgroundImage:  AssetImage("assets/Image/Profile.jpg"),
+                        ),
+         ),),
+ 
+        
         title: Center(child: Container( child: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 24,width: 24,),margin: EdgeInsets.only(right: 1),) ),
         backgroundColor: Colors.white,
         actions: <Widget>[

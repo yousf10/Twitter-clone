@@ -76,6 +76,9 @@ flutter:
     - assets/Icon/navicon/notfication2.png
     - assets/Icon/navicon/sparkles_icon_152754.png
     - assets/Icon/navicon/twitter-logo-2429.png
+    - assets/Icon/navicon/menu.png
+    - assets/Icon/kindpng_4517876.png
+    - assets/Image/Profile.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
