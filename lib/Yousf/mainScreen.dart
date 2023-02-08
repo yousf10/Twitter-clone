@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_twitter_clone/Dilshad/search_screen.dart';
-import 'package:flutter_twitter_clone/Yousf/Drawer/Drawer.dart';
+
+import 'package:flutter_twitter_clone/Yousf/Drawer/drawer.dart';
 import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 
 import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
@@ -33,20 +34,13 @@ class _MainScreenState extends State<MainScreen> {
     HomeAppBar(),
     HomeAppBar()
   ];
-  List drawers=[
-    DrawerMenu(),
-    DrawerMenu(),
-    DrawerMenu(),
-    DrawerMenu(),
-    DrawerMenu()
-  ];
   @override
   int currentindex=0;
   Widget build(BuildContext context) {
     
     return Scaffold(
       appBar: PreferredSize(child: appbars[currentindex], preferredSize:const Size.fromHeight(56)),
-      drawer: drawers[currentindex],
+      drawer: DrawerMenu(),
       body: pages[currentindex],
         bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -59,6 +53,7 @@ class _MainScreenState extends State<MainScreen> {
         unselectedIconTheme:  IconThemeData(color: Colors.black,opacity: 1.0,size: 24),
         currentIndex: currentindex,
         backgroundColor: Colors.white,
+        
         showSelectedLabels: true,
         onTap: (int index)=>setState(() =>currentindex=index) ,
       

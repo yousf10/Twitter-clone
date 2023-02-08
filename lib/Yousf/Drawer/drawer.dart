@@ -24,7 +24,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                   children: [
                     Container(height: 40,width: 40,
                       alignment: AlignmentDirectional.topStart,margin: EdgeInsets.only(left: 32, right: 169,top: 41,bottom: 12),
-                      child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 214),
+                      child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 211),
                       radius: 40,backgroundImage: AssetImage("assets/Image/Profile.jpg"),
                       ),
                     ),
@@ -42,13 +42,13 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("      @Midoriyaizuku\n ",style:TextStyle(color: Color.fromARGB(255, 135, 144, 156),fontSize: 17),),
+                    Text("      @Midoriyaizuku\n ",style:TextStyle(color: Colors.grey,fontSize: 17),),
                     Row(
                       children: [
                         Text("      4 ",style: TextStyle(color: Colors.black,fontSize: 17)),
-                        Text("Following  ",style: TextStyle(color: Color.fromARGB(255, 135, 144, 156),fontSize: 17),),
+                        Text("Following  ",style: TextStyle(color: Colors.grey,fontSize: 17),),
                         Text("2.5M ",style: TextStyle(color: Colors.black,fontSize: 17),),
-                        Text("Followers",style: TextStyle(color: Color.fromARGB(255, 135, 144, 156),fontSize: 17),),
+                        Text("Followers",style: TextStyle(color: Colors.grey,fontSize: 17),),
                       ],
                     )
                   ],
@@ -61,40 +61,46 @@ class _DrawerMenuState extends State<DrawerMenu> {
         ),
         Center(child: 
         Container(margin: 
-        EdgeInsets.only(top: 12), width: 255, 
-        child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),))),
+        EdgeInsets.only(top: 11), width: 255, 
+        child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),)
+        )
+        ),
         Container(
           child: Expanded(child:  
-           ListView(children: [
-            Container(margin: EdgeInsets.only(left: 15),
-              child: ListTile(leading: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 27,width: 27,),
-               title: Text("Profile",style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),),
+           ListView( children: [
+            Container(margin: EdgeInsets.only(left: 11),
+              child: ListTile(leading: Image(image: AssetImage("assets/Icon/drawerIcon/profileicon.png"),height: 31,width: 31,),
+               title: Text("Profile",style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
               ),
             ),
-            Container(margin: EdgeInsets.only(left: 15),
-              child: ListTile(leading: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 27,width: 27,),
-               title: Text("Topics",style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),),
+            Container(margin: EdgeInsets.only(left: 11),
+              child: ListTile(leading: Image(image: AssetImage("assets/Icon/drawerIcon/topics.png"),height: 35,width: 35,),
+               title: Text("Topics",style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
               ),
             ),
-            Container(margin: EdgeInsets.only(left: 15),
-              child: ListTile(leading: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 27,width: 27,),
-               title: Text("Bookmarks",style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),),
+            Container(margin: EdgeInsets.only(left: 11),
+              child: ListTile(leading: Image(image: AssetImage("assets/Icon/drawerIcon/save.png"),height: 30,width: 30,),
+               title: Text("Bookmarks",style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
               ),
             ),
-            Container(margin: EdgeInsets.only(left: 15),
-              child: ListTile(leading: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 27,width: 27,),
-               title: Text("Lists",style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),),
+            Container(margin: EdgeInsets.only(left: 11),
+              child: ListTile(leading: Image(image: AssetImage("assets/Icon/drawerIcon/lists.png"),height: 32,width: 32,),
+               title: Text("Lists",style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
               ),
             ),
-            Container(margin: EdgeInsets.only(left: 15),
-              child: ListTile(leading: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 27,width: 27,),
-               title: Text("Twitter Circle",style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),),
+            Container(margin: EdgeInsets.only(left: 11),
+              child: ListTile(leading: Image(image: AssetImage("assets/Icon/drawerIcon/twittercircle.png"),height: 37,width: 37,),
+               title: Text("Twitter Circle",style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),),
               ),
             ),
             Center(child: 
               Container(margin: 
-                EdgeInsets.only(top: 22), width: 255, 
-                child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),))),
+                EdgeInsets.only(top: 21), width: 255, 
+                child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),)
+                )
+                ),
+
+
           ],)
           ),
         )
