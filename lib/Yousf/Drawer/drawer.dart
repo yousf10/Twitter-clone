@@ -99,7 +99,15 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),)
                 )
                 ),
+                
+                  Container(margin: EdgeInsets.only(top: 1,left: 30), height: 100,width: 250,color: Colors.white,
+                  child: ExpansionTile(  tilePadding: EdgeInsets.only(left: 1), 
+                  children: [Text("Moments",style: TextStyle(fontSize: 16),)], 
+                  title: Text("Creator Studio", style: TextStyle(fontSize: 18,color: Colors.black),),
+                  childrenPadding: EdgeInsets.only(right: 66),),
+                ),
 
+               
 
           ],)
           ),
