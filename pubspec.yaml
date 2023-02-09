@@ -79,6 +79,11 @@ flutter:
     - assets/Icon/navicon/menu.png
     - assets/Icon/kindpng_4517876.png
     - assets/Image/Profile.jpg
+    - assets/Icon/drawerIcon/lists.png
+    - assets/Icon/drawerIcon/profileicon.png
+    - assets/Icon/drawerIcon/save.png
+    - assets/Icon/drawerIcon/topics.png
+    - assets/Icon/drawerIcon/twittercircle.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
