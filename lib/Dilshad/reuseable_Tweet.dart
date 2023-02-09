@@ -7,7 +7,7 @@ class TweetTrending extends StatelessWidget {
   final String NumberOfTweets;
   final String TrendingIn;
 
-// this is class is used to make HashTag's that are Trending in world or local area dynamicaly. 
+// this is class is used to make HashTag's that are Trending in world or local area dynamicaly.
 
   const TweetTrending(
       {super.key,
@@ -40,7 +40,10 @@ class TweetTrending extends StatelessWidget {
           Positioned(
             child: Text(
               NumberOfTweets + " Tweets",
-              style: TextStyle(color: Colors.black54, fontSize: 13),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600),
             ),
           ),
           SizedBox(
