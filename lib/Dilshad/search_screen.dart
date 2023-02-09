@@ -71,6 +71,9 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
             "Show more",
             style: TextStyle(color: Colors.blueAccent, fontSize: 17),
           )),
+          SizedBox(
+            height: 10,
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(

@@ -9,9 +9,6 @@ import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
 
 
-
-
-
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
