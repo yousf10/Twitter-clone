@@ -18,15 +18,6 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.all(10.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: "Search Twitter",
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
           Positioned(
               left: 10,
               top: 10,
@@ -42,11 +33,14 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
             "Only on Twitter . Trending",
             style: TextStyle(fontSize: 15, color: Colors.black54),
           )),
+          SizedBox(
+            height: 5,
+          ),
           Container(
             width: 250,
             height: 77,
             child: const TweetTrending(
-                HashTag: "Al-Zalazel",
+                HashTag: "#Al-Zalazel",
                 NumberOfTweets: "101K",
                 TrendingIn: "Trending in World"),
           ),
@@ -54,7 +48,7 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
             width: 250,
             height: 77,
             child: const TweetTrending(
-                HashTag: "Dilsha Haji .M ",
+                HashTag: "#DilshaD Haji .M ",
                 NumberOfTweets: "5.6M",
                 TrendingIn: "Trending in Iraq"),
           ),
@@ -62,7 +56,7 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
             width: 250,
             height: 77,
             child: const TweetTrending(
-                HashTag: "Flutter.Dev",
+                HashTag: "#Flutter.Dev",
                 NumberOfTweets: "201K",
                 TrendingIn: "Trending in Eouropa"),
           ),

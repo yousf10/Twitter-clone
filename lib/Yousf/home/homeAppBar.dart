@@ -15,12 +15,12 @@ class _HomeAppBarState extends State<HomeAppBar> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton( onPressed: (){Scaffold.of(context).openDrawer();},
-         icon:  Container(height: 30,width: 30,
-           child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 214),
+        icon:  Container(height: 30,width: 30,
+          child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 214),
                         radius: 40,backgroundImage:  AssetImage("assets/Image/Profile.jpg"),
                         ),
-         ),),
- 
+        ),),
+
         
         title: Center(child: Container( child: Image(image: AssetImage("assets/Icon/navicon/twitter-logo-2429.png"),height: 24,width: 24,),margin: EdgeInsets.only(right: 1),) ),
         backgroundColor: Colors.white,
