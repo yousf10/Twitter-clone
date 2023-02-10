@@ -99,8 +99,92 @@ class _DrawerMenuState extends State<DrawerMenu> {
                 child: Divider(height: 0.3,color: Color.fromARGB(255, 201, 199, 199),)
                 )
                 ),
+                //expansion 1
+                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(margin: EdgeInsets.only(top: 20,left: 30),width: 245,color: Colors.white,
+                      child: Theme(data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile( tilePadding: EdgeInsets.only(left: 1), 
+                        children: [
+                          Row(
+                            children: [
+                              Container(child: ImageIcon(new AssetImage("assets/Icon/drawerIcon/topics.png"))),
+                              Container(margin: EdgeInsets.only(left: 20), child: Text("Moments",style: TextStyle(fontSize: 16),))
+                            ],
+                          ),
+                          ], 
+                        title: Text("Creator Studio", style: TextStyle(fontSize: 18,color: Colors.black),),
+                        childrenPadding: EdgeInsets.only(right: 66),),
+                      ),
+                ),
+                
+                ],
+                  ),
 
-
+                  //expansion 2
+                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(margin: EdgeInsets.only(left: 30),width: 245,color: Colors.white,
+                      child: Theme(data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile( tilePadding: EdgeInsets.only(left: 1), 
+                        children: [
+                          Container(margin: EdgeInsets.only(bottom: 17),
+                            child: Row(
+                              children: [
+                                Container(child: ImageIcon(new AssetImage("assets/Icon/drawerIcon/topics.png"))),
+                                Container(margin: EdgeInsets.only(left: 20), child: Text("Twitter for Professionals",style: TextStyle(fontSize: 16),))
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(child: ImageIcon(new AssetImage("assets/Icon/drawerIcon/topics.png"))),
+                                Container(margin: EdgeInsets.only(left: 20), child: Text("Monetisation",style: TextStyle(fontSize: 16),))
+                              ],
+                            ),
+                          ),
+                          ], 
+                        title: Text("Professional Tools", style: TextStyle(fontSize: 18,color: Colors.black),),
+                        childrenPadding: EdgeInsets.only(right: 66),),
+                      ),
+                ),
+                
+                ],
+                  ),
+                  //expansion 3
+                  Column( crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container( margin: EdgeInsets.only(left: 30),width: 245,color: Colors.white,
+                      child: Theme(data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile( tilePadding: EdgeInsets.only(left: 1), 
+                        children: [
+                          Container(margin: EdgeInsets.only(bottom: 17),
+                            child: Row(
+                              children: [
+                                Container(child: ImageIcon(new AssetImage("assets/Icon/drawerIcon/topics.png"))),
+                                Container(margin: EdgeInsets.only(left: 20), child: Text("Settings and privacy",style: TextStyle(fontSize: 16),))
+                              ],
+                            ),
+                          ),
+                          Container(margin: EdgeInsets.only(bottom: 17),
+                            child: Row(
+                              children: [
+                                Container(child: ImageIcon(new AssetImage("assets/Icon/drawerIcon/topics.png"))),
+                                Container(margin: EdgeInsets.only(left: 20), child: Text("Help Centre",style: TextStyle(fontSize: 16),))
+                              ],
+                            ),
+                          ),
+                          ], 
+                        title: Text("Settings & Support", style: TextStyle(fontSize: 18,color: Colors.black),),
+                        childrenPadding: EdgeInsets.only(right: 66),),
+                      ),
+                ),
+                
+                ],
+                  ),
+                  
+                  
           ],)
           ),
         )

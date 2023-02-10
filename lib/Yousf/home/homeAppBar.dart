@@ -13,7 +13,7 @@ class _HomeAppBarState extends State<HomeAppBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( bottomOpacity: 0.0, elevation: 0, shadowColor: Colors.grey,
         leading: IconButton( onPressed: (){Scaffold.of(context).openDrawer();},
         icon:  Container(height: 30,width: 30,
           child: CircleAvatar(foregroundColor: Colors.grey,backgroundColor: Color.fromARGB(255, 172, 194, 214),
