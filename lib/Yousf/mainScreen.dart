@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_twitter_clone/Dilshad/search_screen.dart';
+import 'package:flutter_twitter_clone/Dilshad/Seaech_Screen/search_screen.dart';
 
 import 'package:flutter_twitter_clone/Yousf/Drawer/drawer.dart';
 import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 
 import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
 
-import '../Dilshad/search_app_bar.dart';
+import '../Dilshad/Seaech_Screen/search_app_bar.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

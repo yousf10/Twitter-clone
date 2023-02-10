@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_twitter_clone/Dilshad/reuseable_Tweet.dart';
+import 'package:flutter_twitter_clone/Dilshad/Seaech_Screen/reuseable_Tweet.dart';
 
 class TwitterSearchScreen extends StatefulWidget {
   const TwitterSearchScreen({super.key});
