@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class SearchAppBar extends StatelessWidget {
+class SearchAppBar extends StatefulWidget {
+  const SearchAppBar({super.key});
+
+  @override
+  State<SearchAppBar> createState() => _SearchAppBarState();
+}
+
+class _SearchAppBarState extends State<SearchAppBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,5 +56,6 @@ class SearchAppBar extends StatelessWidget {
         ],
       ),
     );
+    ;
   }
 }
