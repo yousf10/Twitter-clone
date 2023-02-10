@@ -213,18 +213,20 @@ class _DrawerMenuState extends State<DrawerMenu> {
                             child: ExpansionTile(
                               tilePadding: EdgeInsets.only(left: 1),
                               children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                        child: ImageIcon(new AssetImage(
-                                            "assets/Icon/drawerIcon/topics.png"))),
-                                    Container(
-                                        margin: EdgeInsets.only(left: 20),
-                                        child: Text(
-                                          "Moments",
-                                          style: TextStyle(fontSize: 16),
-                                        ))
-                                  ],
+                                Container(margin: EdgeInsets.only(top: 7,bottom: 7),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                          child: ImageIcon(new AssetImage(
+                                              "assets/Icon/drawerIcon/moments.png"))),
+                                      Container(
+                                          margin: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Moments",
+                                            style: TextStyle(fontSize: 16),
+                                          ))
+                                    ],
+                                  ),
                                 ),
                               ],
                               title: Text(
@@ -254,12 +256,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
                               tilePadding: EdgeInsets.only(left: 1),
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 17),
+                                  margin: EdgeInsets.only(bottom: 20,top: 7),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/topics.png"))),
+                                              "assets/Icon/drawerIcon/professional.png"))),
                                       Container(
                                           margin: EdgeInsets.only(left: 20),
                                           child: Text(
@@ -270,11 +272,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
                                   ),
                                 ),
                                 Container(
+                                  margin: EdgeInsets.only(bottom: 7),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/topics.png"))),
+                                              "assets/Icon/drawerIcon/monetisation.png"))),
                                       Container(
                                           margin: EdgeInsets.only(left: 20),
                                           child: Text(
@@ -311,12 +314,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
                               tilePadding: EdgeInsets.only(left: 1),
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 17),
+                                  margin: EdgeInsets.only(bottom: 20,top: 7),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/topics.png"))),
+                                              "assets/Icon/drawerIcon/setting.png"))),
                                       Container(
                                           margin: EdgeInsets.only(left: 20),
                                           child: Text(
@@ -327,12 +330,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 17),
+                                  margin: EdgeInsets.only(bottom: 20),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/topics.png"))),
+                                              "assets/Icon/drawerIcon/help.png"))),
                                       Container(
                                           margin: EdgeInsets.only(left: 20),
                                           child: Text(

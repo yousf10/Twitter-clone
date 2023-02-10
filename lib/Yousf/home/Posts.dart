@@ -84,7 +84,7 @@ class Post extends StatelessWidget {
                 username,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              ImageIcon(star),
+              ImageIcon(star,color: Colors.blue,),
               Text(email + " ∙ ",
                   style: TextStyle(fontSize: 20, color: Colors.grey)),
               Text(time, style: TextStyle(fontSize: 20, color: Colors.grey)),
@@ -93,7 +93,7 @@ class Post extends StatelessWidget {
       Positioned(
           right: 20,
           top: 17,
-          child: ImageIcon(AssetImage("assets/Icon/drawerIcon/topics.png"))),
+          child: ImageIcon(AssetImage("assets/Icon/postIcon/postmenu.png"),color: Colors.grey,)),
       Positioned(
           left: 83,
           top: 50,
@@ -126,11 +126,11 @@ class Post extends StatelessWidget {
           child: Row(
             children: [
               ImageIcon(
-                AssetImage("assets/Icon/drawerIcon/topics.png"),
+                AssetImage("assets/Icon/postIcon/comment.png"),
                 size: 27,
               ),
               Text(
-                " " + comments,
+                "  " + comments,
                 style: TextStyle(fontSize: 17),
               )
             ],
@@ -141,26 +141,26 @@ class Post extends StatelessWidget {
           child: Row(
             children: [
               ImageIcon(
-                AssetImage("assets/Icon/drawerIcon/topics.png"),
+                AssetImage("assets/Icon/postIcon/retweets.png"),
                 size: 27,
               ),
-              Text(" " + retweets, style: TextStyle(fontSize: 17))
+              Text("  " + retweets, style: TextStyle(fontSize: 17))
             ],
           )),
       Positioned(
           bottom: 11,
-          right: 100,
+          right: 96,
           child: Row(
             children: [
-              ImageIcon(AssetImage("assets/Icon/drawerIcon/topics.png"),
+              ImageIcon(AssetImage("assets/Icon/postIcon/like.png"),
                   size: 27),
-              Text(" " + likes, style: TextStyle(fontSize: 17))
+              Text("  " + likes, style: TextStyle(fontSize: 17))
             ],
           )),
       Positioned(
           bottom: 11,
           right: 48,
-          child: ImageIcon(AssetImage("assets/Icon/drawerIcon/topics.png"),
+          child: ImageIcon(AssetImage("assets/Icon/postIcon/share.png"),
               size: 27))
     ]);
   }
