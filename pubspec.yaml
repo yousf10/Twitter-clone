@@ -84,6 +84,24 @@ flutter:
     - assets/Icon/drawerIcon/save.png
     - assets/Icon/drawerIcon/topics.png
     - assets/Icon/drawerIcon/twittercircle.png
+    - assets/Icon/drawerIcon/setting.png
+    - assets/Icon/drawerIcon/arrow_up.png
+    - assets/Icon/drawerIcon/arrow_down.png
+    - assets/Icon/drawerIcon/qr.png
+    - assets/Icon/drawerIcon/professional.png
+    - assets/Icon/drawerIcon/monetisation.png
+    - assets/Icon/drawerIcon/moments.png
+    - assets/Icon/drawerIcon/mode.png
+    - assets/Icon/drawerIcon/help.png
+    - assets/Icon/postIcon/topic.png
+    - assets/Icon/postIcon/share.png
+    - assets/Icon/postIcon/retweets.png
+    - assets/Icon/postIcon/postmenu.png
+    - assets/Icon/postIcon/like.png
+    - assets/Icon/postIcon/friend.png
+    - assets/Icon/postIcon/famous.png
+    - assets/Icon/postIcon/comment.png
+    - assets/Icon/postIcon/close.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
