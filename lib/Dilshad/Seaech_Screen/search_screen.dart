@@ -60,6 +60,30 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
                 NumberOfTweets: "201K",
                 TrendingIn: "Trending in Eouropa"),
           ),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "#TeamWork",
+                NumberOfTweets: "7.3K",
+                TrendingIn: "Trending in OOP"),
+          ),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "#CR7",
+                NumberOfTweets: "7.7M",
+                TrendingIn: "Trending in Sport"),
+          ),
+          Container(
+            width: 250,
+            height: 77,
+            child: const TweetTrending(
+                HashTag: "#Art",
+                NumberOfTweets: "4.2K",
+                TrendingIn: "Trending in Entertaintment"),
+          ),
           Positioned(
               child: Text(
             "Show more",

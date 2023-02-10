@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../ssetting/Setting.dart';
+
 class SearchAppBar extends StatefulWidget {
   const SearchAppBar({super.key});
 
@@ -51,7 +53,14 @@ class _SearchAppBarState extends State<SearchAppBar> {
               Icons.settings,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingScreen(),
+                ),
+              );
+            },
           ),
         ],
       ),
