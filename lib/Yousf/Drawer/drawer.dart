@@ -3,16 +3,19 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class DrawerMenu extends StatefulWidget {
+  
   const DrawerMenu({super.key});
 
   @override
   State<DrawerMenu> createState() => _DrawerMenuState();
 }
-
+String arrow="assets/Icon/drawerIcon/arrow_down.png";
+String arrow2="assets/Icon/drawerIcon/arrow_down.png";
 class _DrawerMenuState extends State<DrawerMenu> {
+   
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return Drawer(width: 320,
       child: Container(
           color: Colors.white,
           child: Column(
@@ -32,7 +35,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                           width: 40,
                           alignment: AlignmentDirectional.topStart,
                           margin: EdgeInsets.only(
-                              left: 32, right: 169, top: 41, bottom: 12),
+                              left: 32, right: 180, top: 41, bottom: 12),
                           child: CircleAvatar(
                             foregroundColor: Colors.grey,
                             backgroundColor: Color.fromARGB(255, 172, 194, 211),
@@ -205,7 +208,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                       children: [
                         Container(
                           margin: EdgeInsets.only(top: 20, left: 30),
-                          width: 245,
+                          width: 259,
                           color: Colors.white,
                           child: Theme(
                             data: Theme.of(context)
@@ -213,14 +216,15 @@ class _DrawerMenuState extends State<DrawerMenu> {
                             child: ExpansionTile(
                               tilePadding: EdgeInsets.only(left: 1),
                               children: [
-                                Container(margin: EdgeInsets.only(top: 7,bottom: 7),
+                                Container(
+                                  margin: EdgeInsets.only(top: 7, bottom: 7),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
                                               "assets/Icon/drawerIcon/moments.png"))),
                                       Container(
-                                          margin: EdgeInsets.only(left: 20),
+                                          margin: EdgeInsets.only(left: 18),
                                           child: Text(
                                             "Moments",
                                             style: TextStyle(fontSize: 16),
@@ -242,86 +246,104 @@ class _DrawerMenuState extends State<DrawerMenu> {
                     ),
 
                     //expansion 2
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 30),
-                          width: 245,
-                          color: Colors.white,
-                          child: Theme(
-                            data: Theme.of(context)
-                                .copyWith(dividerColor: Colors.transparent),
-                            child: ExpansionTile(
-                              tilePadding: EdgeInsets.only(left: 1),
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(bottom: 20,top: 7),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/professional.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "Twitter for Professionals",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
-                                  ),
+                     Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 15),
+                            width: 295,
+                            color: Colors.white,
+                            child: Theme(
+                              data: Theme.of(context)
+                                  .copyWith(dividerColor: Colors.transparent),
+                              child: ExpansionTile( onExpansionChanged: (value) => setState(() {
+                                _onExpansion(value);
+                              }) ,
+                                trailing: Padding(
+                                  padding: const EdgeInsets.only(right: 10),
+                                  child: ImageIcon(new AssetImage(
+                                      arrow),size: 16,),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(bottom: 7),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/monetisation.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "Monetisation",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
+                                iconColor: Colors.blue,
+                                
+                                children: [
+                                  Container(padding: EdgeInsets.only(left: 12),
+                                    margin: EdgeInsets.only( bottom: 20, top: 7),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            child: ImageIcon(new AssetImage(
+                                                "assets/Icon/drawerIcon/professional.png"))),
+                                        Container(
+                                          
+                                            margin: EdgeInsets.only(left: 18),
+                                            child: Text(
+                                              "Twitter for Professionals",
+                                              style: TextStyle(fontSize: 16),
+                                            ))
+                                      ],
+                                    ),
                                   ),
+                                  Container(
+                                    padding: EdgeInsets.only(left: 12),
+                                    margin: EdgeInsets.only(bottom: 7),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            child: ImageIcon(new AssetImage(
+                                                "assets/Icon/drawerIcon/monetisation.png"))),
+                                        Container(
+                                            margin: EdgeInsets.only(left: 20),
+                                            child: Text(
+                                              "Monetisation",
+                                              style: TextStyle(fontSize: 16),
+                                            ))
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                                title: Text(
+                                  "Professional Tools",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.black),
                                 ),
-                              ],
-                              title: Text(
-                                "Professional Tools",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black),
+                                childrenPadding: EdgeInsets.only(right: 66),
                               ),
-                              childrenPadding: EdgeInsets.only(right: 66),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
+                    
                     //expansion 3
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 30),
-                          width: 245,
+                          width: 295,
                           color: Colors.white,
                           child: Theme(
                             data: Theme.of(context)
                                 .copyWith(dividerColor: Colors.transparent),
-                            child: ExpansionTile(
+                            child: ExpansionTile(onExpansionChanged: (value) => setState(() {
+                                _onExpansion2(value);
+                              }) ,
+                                trailing: Padding(
+                                  padding: const EdgeInsets.only(right: 36),
+                                  child: ImageIcon(new AssetImage(
+                                      arrow2),size: 16,),
+                                ),
                               tilePadding: EdgeInsets.only(left: 1),
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 20,top: 7),
+                                  margin: EdgeInsets.only(bottom: 20, top: 7),
                                   child: Row(
                                     children: [
                                       Container(
                                           child: ImageIcon(new AssetImage(
                                               "assets/Icon/drawerIcon/setting.png"))),
                                       Container(
-                                          margin: EdgeInsets.only(left: 20),
+                                          margin: EdgeInsets.only(left: 18),
                                           child: Text(
                                             "Settings and privacy",
                                             style: TextStyle(fontSize: 16),
@@ -337,7 +359,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                                           child: ImageIcon(new AssetImage(
                                               "assets/Icon/drawerIcon/help.png"))),
                                       Container(
-                                          margin: EdgeInsets.only(left: 20),
+                                          margin: EdgeInsets.only(left: 18),
                                           child: Text(
                                             "Help Centre",
                                             style: TextStyle(fontSize: 16),
@@ -364,5 +386,20 @@ class _DrawerMenuState extends State<DrawerMenu> {
           )),
       backgroundColor: Colors.white,
     );
+  }
+}
+
+_onExpansion(bool expanding){
+  if(expanding){
+    arrow="assets/Icon/drawerIcon/arrow_up.png";
+  }else{
+    arrow="assets/Icon/drawerIcon/arrow_down.png";
+  }
+}
+_onExpansion2(bool expanding){
+  if(expanding){
+    arrow2="assets/Icon/drawerIcon/arrow_up.png";
+  }else{
+    arrow2="assets/Icon/drawerIcon/arrow_down.png";
   }
 }
