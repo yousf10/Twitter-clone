@@ -62,7 +62,7 @@ class SettingScreen extends StatelessWidget {
               child: Text(
             "Trends for you",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-          )),
+          )),  
           Positioned(
               child: Text(
             "you can personalize the trends for ",
@@ -79,5 +79,5 @@ class SettingScreen extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
           )),
         ]));
-  }
+  }                                  
 }
