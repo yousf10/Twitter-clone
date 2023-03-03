@@ -15,8 +15,11 @@ String arrow2 = "assets/Icon/drawerIcon/arrow_down.png";
 class _DrawerMenuState extends State<DrawerMenu> {
   @override
   Widget build(BuildContext context) {
-    return Drawer( 
-      width: 350,
+    var width1 = MediaQuery.of(context).size.width;
+    var height1 = MediaQuery.of(context).size.height;
+
+    return Drawer(
+      width: width1 * 0.84,
       child: Container(
           color: Colors.white,
           child: Column(
@@ -36,7 +39,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                           width: 40,
                           alignment: AlignmentDirectional.topStart,
                           margin: EdgeInsets.only(
-                              left: 23, right: 205, top: 41, bottom: 12),
+                              left: 37, right: 177, top: 41, bottom: 12),
                           child: CircleAvatar(
                             foregroundColor: Colors.grey,
                             backgroundColor: Color.fromARGB(255, 172, 194, 211),
@@ -59,7 +62,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 205.0, bottom: 2),
+                      padding: const EdgeInsets.only(right: 180.0, bottom: 2),
                       child: Text(
                         "Midoriya",
                         style: TextStyle(
@@ -69,18 +72,17 @@ class _DrawerMenuState extends State<DrawerMenu> {
                       ),
                     ),
                     Padding(
-                      
-                      padding: const EdgeInsets.only(right: 18.0,),
+                      padding: const EdgeInsets.only(right: 18.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "     @Midoriyaizuku\n ",
+                            "        @Midoriyaizuku\n ",
                             style: TextStyle(color: Colors.grey, fontSize: 17),
                           ),
                           Row(
                             children: [
-                              Text("     4 ",
+                              Text("        4 ",
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 17)),
                               Text(
@@ -109,285 +111,325 @@ class _DrawerMenuState extends State<DrawerMenu> {
               Center(
                   child: Container(
                       margin: EdgeInsets.only(top: 11),
-                      width: 285,
+                      width: 255,
                       child: Divider(
                         height: 0.3,
                         color: Color.fromARGB(255, 201, 199, 199),
                       ))),
-              Container(
-                child: Expanded(
-                    child: ListView(
+              Expanded(
+                child: Stack(
                   children: [
+                    Container(height: height1 * 0.729, width: width1),
                     Container(
-                      margin: EdgeInsets.only(left: 15),
-                      child: ListTile(
-                        leading: Image(
-                          image: AssetImage(
-                              "assets/Icon/drawerIcon/profileicon.png"),
-                          height: 31,
-                          width: 31,
-                        ),
-                        title: Text(
-                          "Profile",
-                          style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold),
-                        ),
+                      child: ListView(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 14),
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    "assets/Icon/drawerIcon/profileicon.png"),
+                                height: 31,
+                                width: 31,
+                              ),
+                              title: Text(
+                                "Profile",
+                                style: TextStyle(
+                                    fontSize: 21, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 14),
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    "assets/Icon/drawerIcon/topics.png"),
+                                height: 35,
+                                width: 35,
+                              ),
+                              title: Text(
+                                "Topics",
+                                style: TextStyle(
+                                    fontSize: 21, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 15),
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    "assets/Icon/drawerIcon/save.png"),
+                                height: 30,
+                                width: 30,
+                              ),
+                              title: Text(
+                                "Bookmarks",
+                                style: TextStyle(
+                                    fontSize: 21, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 14),
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    "assets/Icon/drawerIcon/lists.png"),
+                                height: 32,
+                                width: 32,
+                              ),
+                              title: Text(
+                                "Lists",
+                                style: TextStyle(
+                                    fontSize: 21, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 14),
+                            child: ListTile(
+                              leading: Image(
+                                image: AssetImage(
+                                    "assets/Icon/drawerIcon/twittercircle.png"),
+                                height: 37,
+                                width: 37,
+                              ),
+                              title: Text(
+                                "Twitter Circle",
+                                style: TextStyle(
+                                    fontSize: 21, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          Center(
+                              child: Container(
+                                  margin: EdgeInsets.only(top: 21),
+                                  width: 255,
+                                  child: Divider(
+                                    height: 0.3,
+                                    color: Color.fromARGB(255, 201, 199, 199),
+                                  ))),
+                          //expansion 1
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 20, left: 32),
+                                width: 259,
+                                color: Colors.white,
+                                child: Theme(
+                                  data: Theme.of(context).copyWith(
+                                      dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                    tilePadding: EdgeInsets.only(left: 1),
+                                    children: [
+                                      Container(
+                                        margin:
+                                            EdgeInsets.only(top: 7, bottom: 7),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                                child: ImageIcon(new AssetImage(
+                                                    "assets/Icon/drawerIcon/moments.png"))),
+                                            Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 17),
+                                                child: Text(
+                                                  "Moments",
+                                                  style:
+                                                      TextStyle(fontSize: 16),
+                                                ))
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                    title: Text(
+                                      "Creator Studio",
+                                      style: TextStyle(
+                                          fontSize: 18, color: Colors.black),
+                                    ),
+                                    childrenPadding: EdgeInsets.only(right: 66),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          //expansion 2
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 17),
+                                width: 295,
+                                color: Colors.white,
+                                child: Theme(
+                                  data: Theme.of(context).copyWith(
+                                      dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                    onExpansionChanged: (value) => setState(() {
+                                      _onExpansion(value);
+                                    }),
+                                    trailing: Padding(
+                                      padding: const EdgeInsets.only(right: 10),
+                                      child: ImageIcon(
+                                        new AssetImage(arrow),
+                                        size: 16,
+                                      ),
+                                    ),
+                                    iconColor: Colors.blue,
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.only(left: 13),
+                                        margin:
+                                            EdgeInsets.only(bottom: 20, top: 7),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                                child: ImageIcon(new AssetImage(
+                                                    "assets/Icon/drawerIcon/professional.png"))),
+                                            Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 17),
+                                                child: Text(
+                                                  "Twitter for Professionals",
+                                                  style:
+                                                      TextStyle(fontSize: 16),
+                                                ))
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(left: 13),
+                                        margin: EdgeInsets.only(bottom: 7),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                                child: ImageIcon(new AssetImage(
+                                                    "assets/Icon/drawerIcon/monetisation.png"))),
+                                            Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 19),
+                                                child: Text(
+                                                  "Monetisation",
+                                                  style:
+                                                      TextStyle(fontSize: 16),
+                                                ))
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                    title: Text(
+                                      "Professional Tools",
+                                      style: TextStyle(
+                                          fontSize: 18, color: Colors.black),
+                                    ),
+                                    childrenPadding: EdgeInsets.only(right: 66),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          //expansion 3
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(left: 31,bottom: height1*0.1),
+                                width: 295,
+                                color: Colors.white,
+                                child: Theme(
+                                  data: Theme.of(context).copyWith(
+                                      dividerColor: Colors.transparent),
+                                  child: ExpansionTile(
+                                    onExpansionChanged: (value) => setState(() {
+                                      _onExpansion2(value);
+                                    }),
+                                    trailing: Padding(
+                                      padding: const EdgeInsets.only(right: 40),
+                                      child: ImageIcon(
+                                        new AssetImage(arrow2),
+                                        size: 16,
+                                      ),
+                                    ),
+                                    tilePadding: EdgeInsets.only(left: 1),
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                            bottom: 20, top: 7, left: 1),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                                child: ImageIcon(new AssetImage(
+                                                    "assets/Icon/drawerIcon/setting.png"))),
+                                            Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 17),
+                                                child: Text(
+                                                  "Settings and privacy",
+                                                  style:
+                                                      TextStyle(fontSize: 16),
+                                                ))
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        margin: EdgeInsets.only(bottom: 20),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                                child: ImageIcon(new AssetImage(
+                                                    "assets/Icon/drawerIcon/help.png"))),
+                                            Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 18),
+                                                child: Text(
+                                                  "Help Centre",
+                                                  style:
+                                                      TextStyle(fontSize: 16),
+                                                ))
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                    title: Text(
+                                      "Settings & Support",
+                                      style: TextStyle(
+                                          fontSize: 18, color: Colors.black),
+                                    ),
+                                    childrenPadding: EdgeInsets.only(right: 66),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(left: 14),
-                      child: ListTile(
-                        leading: Image(
-                          image:
-                              AssetImage("assets/Icon/drawerIcon/topics.png"),
-                          height: 35,
-                          width: 35,
-                        ),
-                        title: Text(
-                          "Topics",
-                          style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 15),
-                      child: ListTile(
-                        leading: Image(
-                          image: AssetImage("assets/Icon/drawerIcon/save.png"),
-                          height: 30,
-                          width: 30,
-                        ),
-                        title: Text(
-                          "Bookmarks",
-                          style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 15),
-                      child: ListTile(
-                        leading: Image(
-                          image: AssetImage("assets/Icon/drawerIcon/lists.png"),
-                          height: 32,
-                          width: 32,
-                        ),
-                        title: Text(
-                          "Lists",
-                          style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 14),
-                      child: ListTile(
-                        leading: Image(
-                          image: AssetImage(
-                              "assets/Icon/drawerIcon/twittercircle.png"),
-                          height: 37,
-                          width: 37,
-                        ),
-                        title: Text(
-                          "Twitter Circle",
-                          style: TextStyle(
-                              fontSize: 21, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    Center(
+                    Positioned(
+                        bottom: 0,
                         child: Container(
-                            margin: EdgeInsets.only(top: 21),
-                            width: 285,
-                            child: Divider(
-                              height: 0.3,
-                              color: Color.fromARGB(255, 201, 199, 199),
-                            ))),
-                    //expansion 1
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 20, left: 32),
-                          width: 284,
-                          color: Colors.white,
-                          child: Theme(
-                            data: Theme.of(context)
-                                .copyWith(dividerColor: Colors.transparent),
-                            child: ExpansionTile(
-                              tilePadding: EdgeInsets.only(left: 1),
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(top: 7, bottom: 7),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/moments.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 17),
-                                          child: Text(
-                                            "Moments",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
-                                  ),
-                                ),
-                              ],
-                              title: Text(
-                                "Creator Studio",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black),
+                          height: height1 * 0.1,
+                          width: width1,
+                          
+                          child: Row(
+                            children: [
+                              Container(margin: EdgeInsets.only(left: width1*0.09),
+                                child: ImageIcon(new AssetImage(
+                                    "assets/Icon/drawerIcon/mode.png"),size: 34,),
                               ),
-                              childrenPadding: EdgeInsets.only(right: 66),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    //expansion 2
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 17),
-                          width: 310,
-                          color: Colors.white,
-                          child: Theme(
-                            data: Theme.of(context)
-                                .copyWith(dividerColor: Colors.transparent),
-                            child: ExpansionTile(
-                              onExpansionChanged: (value) => setState(() {
-                                _onExpansion(value);
-                              }),
-                              trailing: Padding(
-                                padding: const EdgeInsets.only(right: 0),
-                                child: ImageIcon(
-                                  new AssetImage(arrow),
-                                  size: 16,
-                                ),
-                              ),
-                              iconColor: Colors.blue,
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(left: 13),
-                                  margin: EdgeInsets.only(bottom: 20, top: 7),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/professional.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 17),
-                                          child: Text(
-                                            "Twitter for Professionals",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
+                                  Container(margin: EdgeInsets.only(left: width1*0.48),
+                                    child: ImageIcon(new AssetImage(
+                                    "assets/Icon/drawerIcon/qr.png"),size: 30,),
                                   ),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.only(left: 13),
-                                  margin: EdgeInsets.only(bottom: 7),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/monetisation.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 19),
-                                          child: Text(
-                                            "Monetisation",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
-                                  ),
-                                ),
-                              ],
-                              title: Text(
-                                "Professional Tools",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black),
-                              ),
-                              childrenPadding: EdgeInsets.only(right: 66),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    //expansion 3
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 31),
-                          width: 295,
-                          color: Colors.white,
-                          child: Theme(
-                            data: Theme.of(context)
-                                .copyWith(dividerColor: Colors.transparent),
-                            child: ExpansionTile(
-                              onExpansionChanged: (value) => setState(() {
-                                _onExpansion2(value);
-                              }),
-                              trailing: Padding(
-                                padding: const EdgeInsets.only(right: 16),
-                                child: ImageIcon(
-                                  new AssetImage(arrow2),
-                                  size: 16,
-                                ),
-                              ),
-                              tilePadding: EdgeInsets.only(left: 1),
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(bottom: 20, top: 7,left: 1),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/setting.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 17),
-                                          child: Text(
-                                            "Settings and privacy",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(bottom: 20),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                          child: ImageIcon(new AssetImage(
-                                              "assets/Icon/drawerIcon/help.png"))),
-                                      Container(
-                                          margin: EdgeInsets.only(left: 18),
-                                          child: Text(
-                                            "Help Centre",
-                                            style: TextStyle(fontSize: 16),
-                                          ))
-                                    ],
-                                  ),
-                                ),
-                              ],
-                              title: Text(
-                                "Settings & Support",
-                                style: TextStyle(
-                                    fontSize: 18, color: Colors.black),
-                              ),
-                              childrenPadding: EdgeInsets.only(right: 66),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                            ],
+                          ),decoration: BoxDecoration(color: Colors.white.withOpacity(0.8)),
+                        ))
                   ],
-                )),
+                ),
               )
             ],
           )),
