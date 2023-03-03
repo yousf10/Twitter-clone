@@ -64,44 +64,11 @@ flutter:
     - assets/Icon/twitter_home.jpg
     - assets/Image/computer-icons-google-account-icon-design-login-png-favpng-jFjxPac6saRuDE3LiyqsYTEZM-600x562.jpg
     - assets/Icon/search.png
-    - assets/Icon/navicon/home1.png
-    - assets/Icon/navicon/home2.png
-    - assets/Icon/navicon/message1.png
-    - assets/Icon/navicon/message2.png
-    - assets/Icon/navicon/mic1.png
-    - assets/Icon/navicon/mic2.png
-    - assets/Icon/navicon/search1.png
-    - assets/Icon/navicon/search2.png
-    - assets/Icon/navicon/notfication1.png
-    - assets/Icon/navicon/notfication2.png
-    - assets/Icon/navicon/sparkles_icon_152754.png
-    - assets/Icon/navicon/twitter-logo-2429.png
-    - assets/Icon/navicon/menu.png
+    - assets/Icon/navicon/
     - assets/Icon/kindpng_4517876.png
     - assets/Image/Profile.jpg
-    - assets/Icon/drawerIcon/lists.png
-    - assets/Icon/drawerIcon/profileicon.png
-    - assets/Icon/drawerIcon/save.png
-    - assets/Icon/drawerIcon/topics.png
-    - assets/Icon/drawerIcon/twittercircle.png
-    - assets/Icon/drawerIcon/setting.png
-    - assets/Icon/drawerIcon/arrow_up.png
-    - assets/Icon/drawerIcon/arrow_down.png
-    - assets/Icon/drawerIcon/qr.png
-    - assets/Icon/drawerIcon/professional.png
-    - assets/Icon/drawerIcon/monetisation.png
-    - assets/Icon/drawerIcon/moments.png
-    - assets/Icon/drawerIcon/mode.png
-    - assets/Icon/drawerIcon/help.png
-    - assets/Icon/postIcon/topic.png
-    - assets/Icon/postIcon/share.png
-    - assets/Icon/postIcon/retweets.png
-    - assets/Icon/postIcon/postmenu.png
-    - assets/Icon/postIcon/like.png
-    - assets/Icon/postIcon/friend.png
-    - assets/Icon/postIcon/famous.png
-    - assets/Icon/postIcon/comment.png
-    - assets/Icon/postIcon/close.png
+    - assets/Icon/drawerIcon/
+    - assets/Icon/postIcon/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
