@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_twitter_clone/Yousf/home/Posts.dart';
 import 'package:flutter_twitter_clone/Yousf/home/userdata.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                     width: 0.4, color: Color.fromARGB(255, 201, 199, 199)),
                 color: Colors.white,
               ),
-              height: height1*0.585,
+              height: height1*0.669,
               width: width1,
             ),
             Positioned(
@@ -48,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Text(
                       datalist[index].username,
-                      style: TextStyle(fontSize:width1*0.05 , fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize:width1*0.047 , fontWeight: FontWeight.bold),
                     ),
                     ImageIcon(
                       datalist[index].star,
@@ -142,6 +141,8 @@ class HomeScreen extends StatelessWidget {
           ]),
         );
       },
-    ));
+    ),
+    
+    floatingActionButton: FloatingActionButton(onPressed: () {},child: Icon(Icons.add),),);
   }
 }

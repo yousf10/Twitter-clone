@@ -19,7 +19,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
     var height1 = MediaQuery.of(context).size.height;
 
     return Drawer(
-      width: width1 * 0.84,
+      width: width1 * 0.88,
       child: Container(
           color: Colors.white,
           child: Column(
@@ -39,7 +39,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                           width: 40,
                           alignment: AlignmentDirectional.topStart,
                           margin: EdgeInsets.only(
-                              left: 37, right: 177, top: 41, bottom: 12),
+                              left: 25, right: width1*0.5, top: 41, bottom: 12),
                           child: CircleAvatar(
                             foregroundColor: Colors.grey,
                             backgroundColor: Color.fromARGB(255, 172, 194, 211),
@@ -62,7 +62,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 180.0, bottom: 2),
+                      padding:  EdgeInsets.only(right: width1*0.5, bottom: 2),
                       child: Text(
                         "Midoriya",
                         style: TextStyle(
@@ -77,12 +77,12 @@ class _DrawerMenuState extends State<DrawerMenu> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "        @Midoriyaizuku\n ",
+                            "      @Midoriyaizuku\n ",
                             style: TextStyle(color: Colors.grey, fontSize: 17),
                           ),
                           Row(
                             children: [
-                              Text("        4 ",
+                              Text("      4 ",
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 17)),
                               Text(
@@ -111,7 +111,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
               Center(
                   child: Container(
                       margin: EdgeInsets.only(top: 11),
-                      width: 255,
+                      width: width1*0.7,
                       child: Divider(
                         height: 0.3,
                         color: Color.fromARGB(255, 201, 199, 199),
@@ -273,7 +273,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                                       _onExpansion(value);
                                     }),
                                     trailing: Padding(
-                                      padding: const EdgeInsets.only(right: 10),
+                                      padding:  EdgeInsets.only(right: width1*0.025),
                                       child: ImageIcon(
                                         new AssetImage(arrow),
                                         size: 16,
@@ -349,7 +349,7 @@ class _DrawerMenuState extends State<DrawerMenu> {
                                       _onExpansion2(value);
                                     }),
                                     trailing: Padding(
-                                      padding: const EdgeInsets.only(right: 40),
+                                      padding:  EdgeInsets.only(right: width1*0.094),
                                       child: ImageIcon(
                                         new AssetImage(arrow2),
                                         size: 16,
@@ -419,11 +419,11 @@ class _DrawerMenuState extends State<DrawerMenu> {
                             children: [
                               Container(margin: EdgeInsets.only(left: width1*0.09),
                                 child: ImageIcon(new AssetImage(
-                                    "assets/Icon/drawerIcon/mode.png"),size: 34,),
+                                    "assets/Icon/drawerIcon/mode.png"),size: width1*0.08,),
                               ),
                                   Container(margin: EdgeInsets.only(left: width1*0.48),
                                     child: ImageIcon(new AssetImage(
-                                    "assets/Icon/drawerIcon/qr.png"),size: 30,),
+                                    "assets/Icon/drawerIcon/qr.png"),size: width1*0.08,),
                                   ),
                             ],
                           ),decoration: BoxDecoration(color: Colors.white.withOpacity(0.8)),
