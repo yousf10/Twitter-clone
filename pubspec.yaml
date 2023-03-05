@@ -69,6 +69,7 @@ flutter:
     - assets/Image/Profile.jpg
     - assets/Icon/drawerIcon/
     - assets/Icon/postIcon/
+    - assets/Image/posts/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
