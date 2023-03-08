@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     TwitterSearchScreen(),
     TwitterSearchScreen(),
-    TwitterSearchScreen(),
+    HomeScreen(),
     TwitterSearchScreen()
   ];
   List appbars = [
