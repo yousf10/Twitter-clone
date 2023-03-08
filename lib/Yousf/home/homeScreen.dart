@@ -40,38 +40,109 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            profileimg: new AssetImage("assets/Image/Profile.jpg"),
-            username: "Yousf",
-            star: new AssetImage("assets/Icon/postIcon/famous.png"),
-            email: "@Yousfbarwary",
-            time: "2h",
-            desc: "texttexttexttexttexttexttexttext texttext",
-            post: AssetImage("assets/Image/Profile.jpg"),
-            comments: "2",
-            retweets: "33",
-            likes: "200",
-          ),
-          Post(
-            tag: TextSpan(
-              text: "#mufc",
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 20,
-              ),
-            ),
-            profileimg: new AssetImage("assets/Image/Profile.jpg"),
-            username: "Yousf",
-            star: new AssetImage("assets/Icon/postIcon/famous.png"),
-            email: "@Yousfbarwary",
-            time: "2h",
-            desc: "texttexttexttexttexttexttexttext texttext",
-            post: AssetImage("assets/Image/Profile.jpg"),
-            comments: "2",
-            retweets: "33",
-            likes: "200",
-          ),
-        ],
-      ),
-    );
+            Positioned(
+                top: 15,
+                left: width1*0.23,
+                child: Row(
+                  children: [
+                    Text(
+                      datalist[index].username,
+                      style: TextStyle(fontSize:width1*0.047 , fontWeight: FontWeight.bold),
+                    ),
+                    ImageIcon(
+                      datalist[index].star,
+                      color: Colors.blue,
+                    ),
+                    Text(datalist[index].email + " ∙ ",
+                        style: TextStyle(fontSize: width1*0.05 , color: Colors.grey)),
+                    Text(datalist[index].time,
+                        style: TextStyle(fontSize: width1*0.05 , color: Colors.grey)),
+                  ],
+                )),
+            Positioned(
+                left: width1*0.9,
+                top: 17,
+                child: ImageIcon(
+                  AssetImage("assets/Icon/postIcon/postmenu.png"),
+                  color: Colors.grey,
+                )),
+            Positioned(
+                left: width1*0.226,
+                top: height1*0.06,
+                child: Column(
+                  children: [
+                    Container(
+                      width: width1*0.736,
+                      child: Text.rich(TextSpan(children: [
+                        TextSpan(
+                            text: datalist[index].desc,
+                            style: TextStyle(
+                              fontSize: width1*0.05 ,
+                            )),
+                        datalist[index].tag
+                      ])),
+                    ),
+                    Container(
+                      width: width1*0.746 ,
+                      height: height1*0.388,
+                      
+                      margin: EdgeInsets.only(top: 7),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          image: DecorationImage(
+                              image: datalist[index].post, fit: BoxFit.cover)),
+                    ),
+                  ],
+                )),
+            Positioned(
+                bottom: 11,
+                left: width1*0.22,
+                child: Row(
+                  children: [
+                    ImageIcon(
+                      AssetImage("assets/Icon/postIcon/comment.png"),
+                      size: width1*0.06,
+                    ),
+                    Text(
+                      "  " + datalist[index].comments,
+                      style: TextStyle(fontSize: width1*0.04),
+                    )
+                  ],
+                )),
+            Positioned(
+                bottom: 11,
+                left: width1*0.41,
+                child: Row(
+                  children: [
+                    ImageIcon(
+                      AssetImage("assets/Icon/postIcon/retweets.png"),
+                      size: width1*0.06,
+                    ),
+                    Text("  " + datalist[index].retweets,
+                        style: TextStyle(fontSize: width1*0.04))
+                  ],
+                )),
+            Positioned(
+                bottom: 11,
+                left: width1*0.61,
+                child: Row(
+                  children: [
+                    ImageIcon(AssetImage("assets/Icon/postIcon/like.png"),
+                        size: width1*0.06),
+                    Text("  " + datalist[index].likes,
+                        style: TextStyle(fontSize: width1*0.04))
+                  ],
+                )),
+            Positioned(
+                bottom: 11,
+                left: width1*0.82,
+                child: ImageIcon(AssetImage("assets/Icon/postIcon/share.png"),
+                    size: width1*0.06))
+          ]),
+        );
+      },
+    ),
+    
+    floatingActionButton: FloatingActionButton(onPressed: () {},child: Icon(Icons.add),),);
   }
 }
