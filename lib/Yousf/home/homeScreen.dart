@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             profileimg: new AssetImage("assets/Image/Profile.jpg"),
-            username: "Yousf",
+            username: "Yousf",.
             star: new AssetImage("assets/Icon/postIcon/famous.png"),
             email: "@Yousfbarwary",
             time: "2h",
