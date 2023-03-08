@@ -68,6 +68,7 @@ class HomeScreen extends StatelessWidget {
             retweets: "33",
             likes: "200",
           ),
+          
         ],
       ),
     );

@@ -1,7 +1,8 @@
-import 'dart:html';
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../Seaech_Screen/search_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   bool switchValue = true;
@@ -10,6 +11,19 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
+          leading: ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => TwitterSearchScreen())));
+            },
+          ),
           title: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -62,7 +76,7 @@ class SettingScreen extends StatelessWidget {
               child: Text(
             "Trends for you",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
-          )),  
+          )),
           Positioned(
               child: Text(
             "you can personalize the trends for ",
@@ -79,5 +93,5 @@ class SettingScreen extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
           )),
         ]));
-  }                                  
+  }
 }
