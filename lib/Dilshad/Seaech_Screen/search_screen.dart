@@ -17,7 +17,7 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -64,7 +64,7 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
             },
           ),
         ],
-      ),
+      ),*/
       body: ListView.builder(
         itemCount: 1,
         itemBuilder: (context, index) {
