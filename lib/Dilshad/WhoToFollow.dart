@@ -142,7 +142,13 @@ class UserList extends StatelessWidget {
                 SizedBox(height: 8),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Text('Follow'),
+                  child: Text(
+                    'Follow',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5),
+                  ),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.blue,
                     padding: EdgeInsets.symmetric(horizontal: 16),

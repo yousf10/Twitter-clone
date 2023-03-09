@@ -3,8 +3,9 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_twitter_clone/Dilshad/Seaech_Screen/Data_Model.dart';
 import 'package:flutter_twitter_clone/Dilshad/Seaech_Screen/reuseable_Tweet.dart';
+import '../VideosForYou.dart';
 import '../ssetting/Setting.dart';
-import '../who.dart';
+import '../WhoToFollow.dart';
 
 class TwitterSearchScreen extends StatefulWidget {
   const TwitterSearchScreen({super.key});
@@ -167,6 +168,29 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
                 height: 3,
               ),
               UserList(),
+              SizedBox(
+                height: 30,
+              ),
+              Positioned(
+                  child: Text(
+                "Videos For You",
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black),
+              )),
+              Positioned(
+                  child: Text(
+                "Check out these popular and trending videos for you",
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black54),
+              )),
+              SizedBox(
+                height: 15,
+              ),
+              VideoList(),
             ],
           );
         },
