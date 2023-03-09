@@ -166,6 +166,7 @@ class _TwitterSearchScreenState extends State<TwitterSearchScreen> {
               SizedBox(
                 height: 3,
               ),
+              UserList(),
             ],
           );
         },
