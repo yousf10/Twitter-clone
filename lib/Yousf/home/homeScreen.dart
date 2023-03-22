@@ -77,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                         TextSpan(
                             text: datalist[index].desc,
                             style: TextStyle(
-                              fontSize: width1*0.05 ,
+                              fontSize: height1*0.025 ,
                             )),
                         datalist[index].tag
                       ])),
