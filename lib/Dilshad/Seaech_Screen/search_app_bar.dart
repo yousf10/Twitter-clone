@@ -50,8 +50,9 @@ class _SearchAppBarState extends State<SearchAppBar> {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.settings,
+              Icons.settings_outlined,
               color: Colors.black,
+              size: 25,
             ),
             onPressed: () {
               Navigator.push(

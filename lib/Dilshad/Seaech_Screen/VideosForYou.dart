@@ -13,12 +13,12 @@ final List<Video> videoList = [
   Video(imageUrl: 'https://picsum.photos/id/1005/400/300', viewerCount: 8),
 ];
 
-class VideoList extends StatefulWidget {
+class VideoList1 extends StatefulWidget {
   @override
   _VideoListState createState() => _VideoListState();
 }
 
-class _VideoListState extends State<VideoList> {
+class _VideoListState extends State<VideoList1> {
   late int _viewerCount;
 
   @override

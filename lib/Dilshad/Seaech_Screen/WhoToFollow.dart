@@ -1,74 +1,3 @@
-/*import 'package:flutter/material.dart';
-
-class WhoToFollowCard extends StatelessWidget {
-  final String name;
-  final String username;
-  final String imageUrl;
-
-  WhoToFollowCard(
-      {required this.name, required this.username, required this.imageUrl});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 100,
-      margin: EdgeInsets.symmetric(vertical: 10.0),
-      child: Row(
-        children: [
-          Container(
-            height: 50.0,
-            width: 50.0,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: NetworkImage(imageUrl),
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-          SizedBox(width: 10.0),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(name),
-              Text(
-                '@$username',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12.0,
-                ),
-              ),
-            ],
-          ),
-          Expanded(child: Container()),
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.grey,
-                width: 1.0,
-              ),
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: TextButton(
-              onPressed: () {
-                // Add onPress logic here
-              },
-              child: Text(
-                'Follow',
-                style: TextStyle(
-                  fontSize: 12.0,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-*/
-
 import 'package:flutter/material.dart';
 
 class User {
@@ -87,7 +16,7 @@ List<User> userList = [
   User(
       name: 'Dilshad Haji',
       username: '@Dilshad_02',
-      imageUrl: new AssetImage("assets/Image/posts/guko.jpg")),
+      imageUrl: new AssetImage("assets/Image/posts/rashford.jpg")),
   User(
     name: 'Yousef Mhamad',
     username: '@Yousef',
@@ -105,8 +34,17 @@ List<User> userList = [
   )
 ];
 
-class UserList extends StatelessWidget {
+class UserList extends StatefulWidget {
   @override
+  State<UserList> createState() => _UserListState();
+}
+
+class _UserListState extends State<UserList> {
+  @override
+  //late String folloetext = "Follow";
+  String following = "Follow";
+  String following1 = "Follow";
+
   Widget build(BuildContext context) {
     return Container(
       height: 200,
@@ -141,9 +79,13 @@ class UserList extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState() {
+                      following = change();
+                    }
+                  },
                   child: Text(
-                    'Follow',
+                    following,
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -162,4 +104,9 @@ class UserList extends StatelessWidget {
       ),
     );
   }
+}
+
+String change() {
+  String a = "Following";
+  return (a).toString();
 }
