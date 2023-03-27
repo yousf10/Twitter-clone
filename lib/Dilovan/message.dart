@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw3/hw5data.dart';
-import 'package:flutter_hw3/messagedata.dart';
-
+import 'package:flutter_twitter_clone/Dilovan/messageData.dart';
 class messageS extends StatelessWidget {
   const messageS({super.key});
 
