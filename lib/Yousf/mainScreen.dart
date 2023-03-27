@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_twitter_clone/Dilovan/message.dart';
+import 'package:flutter_twitter_clone/Dilovan/messageAppBar.dart';
 import 'package:flutter_twitter_clone/Dilshad/Seaech_Screen/search_screen.dart';
 
 import 'package:flutter_twitter_clone/Yousf/Drawer/drawer.dart';
@@ -23,14 +25,14 @@ class _MainScreenState extends State<MainScreen> {
     TwitterSearchScreen(),
     TwitterSearchScreen(),
     HomeScreen(),
-    TwitterSearchScreen()
+    messageS()
   ];
   List appbars = [
     HomeAppBar(),
     SearchAppBar(),
     HomeAppBar(),
     HomeAppBar(),
-    HomeAppBar()
+    MessageAppBar()
   ];
   @override
   int currentindex = 0;
