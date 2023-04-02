@@ -9,6 +9,7 @@ import 'package:flutter_twitter_clone/Yousf/Drawer/drawer.dart';
 import 'package:flutter_twitter_clone/Yousf/home/homeAppBar.dart';
 
 import 'package:flutter_twitter_clone/Yousf/home/homeScreen.dart';
+import 'package:flutter_twitter_clone/emptyScreen.dart';
 
 import '../Dilshad/Seaech_Screen/search_app_bar.dart';
 
@@ -23,8 +24,8 @@ class _MainScreenState extends State<MainScreen> {
   List pages = [
     HomeScreen(),
     TwitterSearchScreen(),
-    TwitterSearchScreen(),
-    HomeScreen(),
+    EmptyScreen(),
+    EmptyScreen(),
     messageS()
   ];
   List appbars = [
