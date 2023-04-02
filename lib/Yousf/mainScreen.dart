@@ -61,7 +61,7 @@ class _MainScreenState extends State<MainScreen> {
         onTap: (int index) => setState(() => currentindex = index),
         items: [
           BottomNavigationBarItem(
-              label: " ",
+              label: "",
               icon: ImageIcon(
                   AssetImage(
                     "assets/Icon/navicon/home1.png",
@@ -76,7 +76,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              label: " ",
+              label: "",
               icon: ImageIcon(
                   AssetImage(
                     "assets/Icon/navicon/search1.png",
@@ -91,7 +91,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              label: " ",
+              label: "",
               icon: ImageIcon(
                   AssetImage(
                     "assets/Icon/navicon/mic1.png",
@@ -105,7 +105,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              label: " ",
+              label: "",
               icon: ImageIcon(
                   AssetImage(
                     "assets/Icon/navicon/notfication1.png",
@@ -120,7 +120,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               backgroundColor: Colors.blue),
           BottomNavigationBarItem(
-              label: " ",
+              label: "",
               icon: ImageIcon(
                   AssetImage(
                     "assets/Icon/navicon/message1.png",
